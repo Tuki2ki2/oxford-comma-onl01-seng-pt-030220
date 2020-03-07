@@ -1,8 +1,17 @@
 require "pry"
 def oxford_comma(array)
-  new_array = []
-  array.pop[-1]
-  new_array << array
-  new_array << ", and #{array[-1]}"
-  new_array.join (" ")
+  if array.count <=1
+  array.join(" ") 
+  elsif array.count <=2
+    removed_item = array.pop
+    array<< "and #{removed_item}"
+    array.join(" ")
+  elsif array.count >=3 
+  removed_item= array.pop
+  array<<"and #{removed_item}"
+  array.join(", ")
+
+  else  
+  end
 end
+
